@@ -218,6 +218,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <div class="nav-right">
       <select id="daySelect" onchange="if(this.value){ openDay(this.value); this.value=''; }">
         <option value="">Day 이동</option>
+        <option value="6">Day 6</option>
         <option value="5">Day 5</option>
         <option value="4">Day 4</option>
         <option value="3">Day 3</option>
@@ -242,7 +243,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <h1>하루 하나,<br>말할 수 있는<br><span class="accent">영어 문법이 쌓입니다.</span></h1>
     <p class="lead">설명은 짧게, 연습은 많이. 매일 새 문법·표현 하나를 배우고 바로 퀴즐렛으로 복습하세요.</p>
     <div class="stat-strip">
-      <div class="stat"><div class="num">5</div><div class="label">Day 누적</div></div>
+      <div class="stat"><div class="num">6</div><div class="label">Day 누적</div></div>
       <div class="stat"><div class="num">3</div><div class="label">트랙 (스피킹·어미표현·기본문법)</div></div>
       <div class="stat"><div class="num">10</div><div class="label">문제 매일 연습</div></div>
       <div class="stat"><div class="num">AM 10</div><div class="label">매일 자동 업데이트</div></div>
@@ -255,6 +256,11 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
 
   <div class="card-grid" id="cardGrid">
     <!-- CARDS_START: 새 카드는 이 주석 바로 아래에 추가 (최신이 위) -->
+    <button class="post-card" data-track="speaking" onclick="openDay(6)">
+      <div class="pc-meta"><span class="day-badge">Day 6</span><span class="tag speaking">스피킹</span></div>
+      <h3>애매하게 말하기 — kinda / sorta</h3>
+      <p class="excerpt">kind of, sort of를 원어민처럼 캐주얼하게 줄여서 정도를 부드럽게 말하기.</p>
+    </button>
     <button class="post-card" data-track="pattern" onclick="openDay(5)">
       <div class="pc-meta"><span class="day-badge">Day 5</span><span class="tag pattern">어미·표현</span></div>
       <h3>지루한 거야, 지루하게 하는 거야? -ing vs -ed 감정 형용사</h3>
@@ -284,6 +290,52 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
   </div>
 
   <!-- POSTS_START: 새 글은 이 주석 바로 아래에 추가 (최신이 위) -->
+
+  <div class="day-detail" id="detail6">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day6" data-track="speaking">
+      <div class="meta">
+        <span class="day-badge">Day 6</span>
+        <span class="tag speaking">스피킹</span>
+      </div>
+      <h2>애매하게 말하기 — kinda / sorta</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> kind of → kinda / sort of → sorta — 정도를 애매하게, 부드럽게 말할 때 쓰는 캐주얼 표현</p>
+        <p><span class="label">주의</span> 말할 때만 쓰는 표현. 이메일이나 에세이 같은 격식 있는 글에는 kind of / sort of 그대로 씀.</p>
+        <p><span class="label">예문</span> I'm kinda tired. / It's sorta cold today. / I kinda like it.</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — kind of / sort of를 캐주얼 축약형으로 바꿔 말해보기</h3>
+      <ol class="practice">
+        <li>I am kind of hungry. → I'm ___ hungry.</li>
+        <li>This movie is sort of boring. → This movie is ___ boring.</li>
+        <li>She is kind of upset today. → She's ___ upset today.</li>
+        <li>It's sort of expensive. → It's ___ expensive.</li>
+        <li>I kind of want to go home. → I ___ want to go home.</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. kinda&nbsp;&nbsp; 2. sorta&nbsp;&nbsp; 3. kinda&nbsp;&nbsp; 4. sorta&nbsp;&nbsp; 5. kinda</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — kinda / sorta 써서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">Are you kinda tired today?</li>
+        <li class="qcard">Do you kinda like spicy food?</li>
+        <li class="qcard">Is your job sorta stressful these days?</li>
+        <li class="qcard">Are you kinda nervous about anything right now?</li>
+        <li class="qcard">Do you sorta wanna travel somewhere new this year?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed6"><iframe src="https://quizlet.com/1196523684/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1196523684/daniel-grammar-day-6-kindasorta-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
 
   <div class="day-detail" id="detail5">
     <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
