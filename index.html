@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANIEL GRAMMAR — 하루 영어 문법</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+:root {
+  --black: #0e0e10;
+  --green: #22c55e;
+  --green-dark: #16a34a;
+  --text: #111114;
+  --gray: #6b7280;
+  --line: #e5e7eb;
+  --bg: #fafafa;
+  --card: #ffffff;
+  --speaking: #0e0e10;
+  --pattern: #22c55e;
+  --basic: #4b5563;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", "Malgun Gothic", sans-serif;
+  line-height: 1.65;
+}
+a { color: inherit; }
+
+/* ---------- NAV ---------- */
+.navbar {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 1000px; margin: 0 auto; padding: 14px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.brand { display: flex; flex-direction: column; line-height: 1.1; }
+.brand .logo { font-weight: 900; font-size: 1.05rem; letter-spacing: -0.02em; }
+.brand .sub { font-size: 0.68rem; color: var(--gray); font-weight: 500; }
+
+.filter-group { display: flex; gap: 6px; flex-wrap: wrap; }
+.filter-btn {
+  border: 1px solid var(--line); background: #fff; color: var(--text);
+  padding: 7px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 600;
+  cursor: pointer; transition: all .15s ease;
+}
+.filter-btn:hover { border-color: var(--black); }
+.filter-btn.active { background: var(--black); color: #fff; border-color: var(--black); }
+
+.nav-right { display: flex; align-items: center; gap: 10px; }
+select#daySelect {
+  border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px;
+  font-size: 0.8rem; font-family: inherit; background: #fff; cursor: pointer;
+}
+.nav-cta {
+  background: var(--black); color: #fff; padding: 8px 16px; border-radius: 999px;
+  font-size: 0.8rem; font-weight: 700; text-decoration: none; white-space: nowrap;
+}
+
+/* ---------- HERO ---------- */
+.hero { background: var(--black); color: #fff; padding: 64px 24px 40px; }
+.hero-inner { max-width: 1000px; margin: 0 auto; }
+.eyebrow { color: var(--green); font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; margin-bottom: 18px; }
+.eyebrow .dash { display: inline-block; width: 20px; height: 2px; background: var(--green); }
+.hero h1 { font-size: 2.4rem; font-weight: 900; letter-spacing: -0.02em; margin: 0 0 20px; line-height: 1.25; }
+.hero h1 .accent { color: var(--green); }
+.hero p.lead { color: #c9c9cf; font-size: 1rem; max-width: 560px; margin: 0 0 32px; }
+
+.stat-strip {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #2a2a2e; margin-top: 8px;
+}
+.stat-strip .stat { padding: 18px 4px 0; }
+.stat .num { font-size: 1.5rem; font-weight: 900; color: var(--green); }
+.stat .label { font-size: 0.78rem; color: #9a9aa2; margin-top: 2px; }
+
+/* marquee */
+.marquee-wrap { background: var(--green); overflow: hidden; white-space: nowrap; padding: 9px 0; }
+.marquee { display: inline-block; padding-left: 100%; animation: scroll-left 22s linear infinite; font-weight: 700; font-size: 0.82rem; color: #0e0e10; }
+.marquee span { margin: 0 10px; }
+@keyframes scroll-left { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+
+/* ---------- FEED ---------- */
+.wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+.section-label { color: var(--gray); font-weight: 700; font-size: 0.8rem; display: flex; align-items: center; gap: 8px; margin-bottom: 24px; }
+.section-label .dash { display: inline-block; width: 20px; height: 2px; background: var(--green); }
+
+.day-section { padding: 30px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 90px; }
+.day-section:first-of-type { padding-top: 0; }
+
+.meta { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+.day-badge { font-size: 0.75rem; font-weight: 800; color: var(--gray); }
+.tag { font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; color: #fff; }
+.tag.speaking { background: var(--speaking); }
+.tag.pattern { background: var(--pattern); }
+.tag.basic { background: var(--basic); }
+
+.day-section h2 { font-size: 1.35rem; margin: 0 0 4px; font-weight: 800; letter-spacing: -0.01em; }
+
+.pattern-box {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--green);
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin: 16px 0;
+}
+.pattern-box p { margin: 6px 0; font-size: 0.94rem; }
+.pattern-box .label { font-weight: 800; }
+
+h3.sub { font-size: 0.98rem; margin: 20px 0 8px; font-weight: 800; }
+ol.practice { padding-left: 22px; }
+ol.practice li { margin-bottom: 10px; font-size: 0.95rem; }
+
+.qcards {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+  margin: 12px 0 20px; padding: 0; list-style: none;
+}
+.qcards .qcard {
+  border: 1px solid var(--line); border-radius: 8px; background: var(--card);
+  padding: 14px 16px; font-size: 0.92rem; font-style: italic; line-height: 1.5;
+}
+@media (max-width: 560px) { .qcards { grid-template-columns: 1fr; } }
+
+details.answers {
+  margin: 16px 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+details.answers summary { cursor: pointer; font-weight: 700; font-size: 0.9rem; }
+
+.source-note { color: var(--gray); font-size: 0.82rem; margin: 10px 0; }
+
+.quizlet-box { margin-top: 22px; border-top: 1px dashed var(--line); padding-top: 18px; }
+.quizlet-box h4 { font-size: 0.92rem; margin-bottom: 8px; font-weight: 800; }
+pre.import {
+  background: #17171a; color: #eee; padding: 14px 16px; border-radius: 8px;
+  overflow-x: auto; font-size: 0.82rem; line-height: 1.5;
+}
+button.copy-btn {
+  margin-top: 8px; padding: 7px 14px; border: 1px solid var(--black);
+  background: var(--black); color: #fff; border-radius: 999px; cursor: pointer; font-size: 0.82rem; font-weight: 700;
+}
+button.copy-btn:hover { background: var(--green-dark); border-color: var(--green-dark); }
+
+.embed-slot {
+  margin-top: 14px; border: 2px dashed var(--line); border-radius: 8px;
+  padding: 18px; text-align: center; color: var(--gray); font-size: 0.82rem;
+}
+.embed-slot iframe { width: 100%; height: 700px; border: none; border-radius: 8px; }
+.embed-slot:has(iframe) { border: none; padding: 0; text-align: left; }
+.quizlet-fallback {
+  display: inline-block; margin-top: 10px; font-size: 0.82rem; font-weight: 600;
+  color: var(--gray); text-decoration: none;
+}
+.quizlet-fallback:hover { color: var(--green-dark); }
+
+/* ---------- FOOTER ---------- */
+footer { background: var(--black); color: #c9c9cf; padding: 40px 24px 28px; }
+footer .footer-inner { max-width: 1000px; margin: 0 auto; }
+footer .flogo { font-weight: 900; color: #fff; font-size: 1.1rem; margin-bottom: 10px; }
+footer a.flink { color: #c9c9cf; text-decoration: none; font-size: 0.85rem; margin-right: 16px; }
+footer a.flink:hover { color: var(--green); }
+footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.7rem; }
+  .stat-strip { grid-template-columns: repeat(2, 1fr); row-gap: 16px; }
+  .nav-inner { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="brand">
+      <span class="logo">DANIEL GRAMMAR</span>
+      <span class="sub">by Daniel English</span>
+    </div>
+    <div class="filter-group" id="filterGroup">
+      <button class="filter-btn active" onclick="filterTrack('all', this)">전체</button>
+      <button class="filter-btn" onclick="filterTrack('speaking', this)">스피킹</button>
+      <button class="filter-btn" onclick="filterTrack('pattern', this)">어미·표현</button>
+      <button class="filter-btn" onclick="filterTrack('basic', this)">기본문법</button>
+    </div>
+    <div class="nav-right">
+      <select id="daySelect" onchange="if(this.value) location.hash=this.value;">
+        <option value="">Day 이동</option>
+        <option value="#day4">Day 4</option>
+        <option value="#day3">Day 3</option>
+        <option value="#day2">Day 2</option>
+        <option value="#day1">Day 1</option>
+      </select>
+      <a class="nav-cta" href="https://danielenglish.kr" target="_blank" rel="noopener">danielenglish.kr →</a>
+    </div>
+  </div>
+</nav>
+
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>스피킹 패턴 ●</span><span>어미·표현 ●</span><span>기본문법 ●</span><span>매일 오전 10시 업데이트 ●</span><span>퀴즐렛 자동 연동 ●</span>
+    <span>스피킹 패턴 ●</span><span>어미·표현 ●</span><span>기본문법 ●</span><span>매일 오전 10시 업데이트 ●</span><span>퀴즐렛 자동 연동 ●</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow"><span class="dash"></span> DANIEL ENGLISH 학생을 위한 매일 문법</div>
+    <h1>하루 하나,<br>말할 수 있는<br><span class="accent">영어 문법이 쌓입니다.</span></h1>
+    <p class="lead">설명은 짧게, 연습은 많이. 매일 새 문법·표현 하나를 배우고 바로 퀴즐렛으로 복습하세요.</p>
+    <div class="stat-strip">
+      <div class="stat"><div class="num">4</div><div class="label">Day 누적</div></div>
+      <div class="stat"><div class="num">3</div><div class="label">트랙 (스피킹·어미표현·기본문법)</div></div>
+      <div class="stat"><div class="num">10</div><div class="label">문제 매일 연습</div></div>
+      <div class="stat"><div class="num">AM 10</div><div class="label">매일 자동 업데이트</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="section-label"><span class="dash"></span> DAILY GRAMMAR</div>
+
+  <!-- POSTS_START: 새 글은 이 주석 바로 아래에 추가 (최신이 위) -->
+
+  <section class="day-section" id="day4" data-track="speaking">
+    <div class="meta">
+      <span class="day-badge">Day 4</span>
+      <span class="tag speaking">스피킹</span>
+    </div>
+    <h2>말할 때 진짜 쓰는 축약형 — gonna / wanna / gotta</h2>
+
+    <div class="pattern-box">
+      <p><span class="label">패턴</span> going to → gonna / want to → wanna / got to (have to) → gotta</p>
+      <p><span class="label">주의</span> 편하게 말할 때만 쓰는 캐주얼한 표현. 이메일이나 에세이 같은 격식 있는 글에는 안 씀.</p>
+      <p><span class="label">예문</span> I'm gonna go home. / I wanna eat pizza. / I gotta go now.</p>
+    </div>
+
+    <h3 class="sub">연습 10개 — 격식체를 캐주얼 축약형으로 바꿔 말해보기</h3>
+    <ol class="practice">
+      <li>I am going to watch a movie tonight. → I'm ___ watch a movie tonight.</li>
+      <li>Do you want to come with us? → Do you ___ come with us?</li>
+      <li>I have got to finish this today. → I ___ finish this today.</li>
+      <li>She is going to call you later. → She's ___ call you later.</li>
+      <li>I want to try that new restaurant. → I ___ try that new restaurant.</li>
+      <li>We have got to leave now. → We ___ leave now.</li>
+      <li>He is going to be late. → He's ___ be late.</li>
+      <li>I want to sleep in tomorrow. → I ___ sleep in tomorrow.</li>
+      <li>They are going to move next month. → They're ___ move next month.</li>
+      <li>You have got to see this. → You ___ see this.</li>
+    </ol>
+
+    <details class="answers">
+      <summary>정답 보기</summary>
+      <p>1. gonna&nbsp;&nbsp; 2. wanna&nbsp;&nbsp; 3. gotta&nbsp;&nbsp; 4. gonna&nbsp;&nbsp; 5. wanna&nbsp;&nbsp; 6. gotta&nbsp;&nbsp; 7. gonna&nbsp;&nbsp; 8. wanna&nbsp;&nbsp; 9. gonna&nbsp;&nbsp; 10. gotta</p>
+    </details>
+
+    <h3 class="sub">질문 카드 — gonna / wanna 써서 답해보기</h3>
+    <ul class="qcards">
+      <li class="qcard">What are you gonna do this weekend?</li>
+      <li class="qcard">What do you wanna eat for dinner tonight?</li>
+      <li class="qcard">Are you gonna watch anything good this week?</li>
+      <li class="qcard">What are you gonna do after this class?</li>
+      <li class="qcard">Do you wanna hang out with friends this weekend?</li>
+      <li class="qcard">What are you gonna do when you get home today?</li>
+    </ul>
+
+    <div class="quizlet-box">
+      <h4>퀴즐렛으로 복습하기</h4>
+      <div class="embed-slot" id="embed4"><iframe src="https://quizlet.com/1196497054/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+      <a class="quizlet-fallback" href="https://quizlet.com/kr/1196497054/daniel-grammar-day-4-gonna-wanna-gotta-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+    </div>
+  </section>
+
+  <section class="day-section" id="day3" data-track="basic">
+    <div class="meta">
+      <span class="day-badge">Day 3</span>
+      <span class="tag basic">기본문법</span>
+    </div>
+    <h2>Do / Does로 질문하기</h2>
+
+    <div class="pattern-box">
+      <p><span class="label">패턴</span> Do + I/you/we/they + 동사원형 ~? / Does + he/she/it + 동사원형 ~?</p>
+      <p><span class="label">핵심</span> does를 쓰면 동사는 항상 원형 (좋아한다 = likes 아니고 like)</p>
+    </div>
+
+    <h3 class="sub">1~5. 카드 질문 그대로 답해보기</h3>
+    <ul class="qcards">
+      <li class="qcard">Do you have any siblings? What are they like?</li>
+      <li class="qcard">Do you have any pets? Can you talk about them?</li>
+      <li class="qcard">Do you play any sports? What's your favorite one?</li>
+      <li class="qcard">Do you go to the movies often?</li>
+      <li class="qcard">Do you like your job?</li>
+    </ul>
+
+    <h3 class="sub">6~10. 문장을 Do/Does 의문문으로 바꾸기</h3>
+    <ol class="practice" start="6">
+      <li>She likes pizza. → ___ she like pizza?</li>
+      <li>He plays soccer. → ___ he play soccer?</li>
+      <li>They have a dog. → ___ they have a dog?</li>
+      <li>He goes to the gym. → ___ he go to the gym?</li>
+      <li>She works on Saturdays. → ___ she work on Saturdays?</li>
+    </ol>
+
+    <details class="answers">
+      <summary>정답 보기 (6~10)</summary>
+      <p>6. Does&nbsp;&nbsp; 7. Does&nbsp;&nbsp; 8. Do&nbsp;&nbsp; 9. Does&nbsp;&nbsp; 10. Does</p>
+    </details>
+
+    <div class="quizlet-box">
+      <h4>퀴즐렛으로 복습하기</h4>
+      <div class="embed-slot" id="embed3"><iframe src="https://quizlet.com/1196496834/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+      <a class="quizlet-fallback" href="https://quizlet.com/kr/1196496834/daniel-grammar-day-3-do-does-%EC%9D%98%EB%AC%B8%EB%AC%B8-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+    </div>
+  </section>
+
+  <section class="day-section" id="day2" data-track="pattern">
+    <div class="meta">
+      <span class="day-badge">Day 2</span>
+      <span class="tag pattern">어미·표현</span>
+    </div>
+    <h2>얼마나 자주 하는지 말하기 — 빈도부사</h2>
+
+    <div class="pattern-box">
+      <p><span class="label">패턴</span> 빈도부사는 일반동사 앞, be동사 뒤에 온다. (I <b>usually</b> go / I <b>am usually</b> tired)</p>
+      <p><span class="label">빈도 스케일</span> always(100%) – usually(80%) – often(60%) – sometimes(40%) – not often(20%) – rarely(10%) – hardly ever(5%) – never(0%)</p>
+      <p><span class="label">"once a week" 다르게 말하기</span> 횟수 + a + 기간 → once a day/week/month/year, twice a week/month/year, three times a week/month/year</p>
+    </div>
+
+    <h3 class="sub">연습 10개 — 질문에 빈도 표현 넣어서 답해보기</h3>
+    <ul class="qcards">
+      <li class="qcard">Do you play any sports? How often do you play?</li>
+      <li class="qcard">How often do you go on trips? Where do you like to travel?</li>
+      <li class="qcard">How often do you eat out? What's your favorite restaurant?</li>
+      <li class="qcard">Do you go to the movies often? What kind of movies do you like best?</li>
+      <li class="qcard">What do you usually do when you have free time?</li>
+      <li class="qcard">What do you usually do on Saturdays?</li>
+      <li class="qcard">What do you usually do on your birthday?</li>
+      <li class="qcard">What's your favorite day of the week, and why?</li>
+      <li class="qcard">What do you usually do in the evening?</li>
+      <li class="qcard">What time do you usually go to bed?</li>
+    </ul>
+
+    <div class="quizlet-box">
+      <h4>퀴즐렛으로 복습하기</h4>
+      <div class="embed-slot" id="embed2"><iframe src="https://quizlet.com/1196496520/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+      <a class="quizlet-fallback" href="https://quizlet.com/kr/1196496520/daniel-grammar-day-2-%EB%B9%88%EB%8F%84%EB%B6%80%EC%82%AC-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+    </div>
+  </section>
+
+  <section class="day-section" id="day1" data-track="basic">
+    <div class="meta">
+      <span class="day-badge">Day 1</span>
+      <span class="tag basic">기본문법</span>
+    </div>
+    <h2>동사 뒤엔 뭐가 오는가</h2>
+
+    <div class="pattern-box">
+      <p><span class="label">패턴</span> 주어 + 동사 + 목적어</p>
+      <p><span class="label">예문</span> I love him.</p>
+    </div>
+
+    <h3 class="sub">연습 10개 — 빈칸에 넣어 말해보기</h3>
+    <ol class="practice">
+      <li>나는 커피를 좋아해. → I ___ coffee.</li>
+      <li>그는 그녀를 믿어. → He ___ her.</li>
+      <li>우리는 그 영화를 봤어. → We ___ the movie.</li>
+      <li>그들은 답을 알아. → They ___ the answer.</li>
+      <li>나는 널 이해해. → I ___ you.</li>
+      <li>그녀는 개를 키워. → She ___ a dog.</li>
+      <li>우리는 그 계획을 좋아해. → We ___ the plan.</li>
+      <li>그는 진실을 말했어. → He ___ the truth.</li>
+      <li>나는 그 노래를 알아. → I ___ that song.</li>
+      <li>그들은 그 집을 샀어. → They ___ the house.</li>
+    </ol>
+
+    <details class="answers">
+      <summary>정답 보기</summary>
+      <p>1. like&nbsp;&nbsp; 2. trusts&nbsp;&nbsp; 3. watched&nbsp;&nbsp; 4. know&nbsp;&nbsp; 5. understand&nbsp;&nbsp; 6. has&nbsp;&nbsp; 7. like&nbsp;&nbsp; 8. told&nbsp;&nbsp; 9. know&nbsp;&nbsp; 10. bought</p>
+    </details>
+
+    <div class="quizlet-box">
+      <h4>퀴즐렛으로 복습하기</h4>
+      <div class="embed-slot" id="embed1"><iframe src="https://quizlet.com/1196496044/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+      <a class="quizlet-fallback" href="https://quizlet.com/kr/1196496044/daniel-grammar-day-1-%EB%8F%99%EC%82%AC-%EB%92%A4%EC%97%94-%EB%AD%90%EA%B0%80-%EC%98%A4%EB%8A%94%EA%B0%80-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+    </div>
+  </section>
+
+  <!-- POSTS_END -->
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="flogo">DANIEL GRAMMAR</div>
+    <a class="flink" href="https://danielenglish.kr" target="_blank" rel="noopener">대니엘잉글리쉬 홈페이지</a>
+    <a class="flink" href="https://danielreadbox.netlify.app" target="_blank" rel="noopener">Daniel Read Box</a>
+    <div class="copyright">© 2026 Daniel English. 서귀포시 동홍중앙로 66번길 22</div>
+  </div>
+</footer>
+
+<script>
+function copyText(id, btn) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const original = btn.innerText;
+    btn.innerText = "복사됨!";
+    setTimeout(() => { btn.innerText = original; }, 1500);
+  });
+}
+function filterTrack(track, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.day-section').forEach(sec => {
+    sec.style.display = (track === 'all' || sec.dataset.track === track) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
