@@ -218,6 +218,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <div class="nav-right">
       <select id="daySelect" onchange="if(this.value){ openDay(this.value); this.value=''; }">
         <option value="">Day 이동</option>
+        <option value="7">Day 7</option>
         <option value="6">Day 6</option>
         <option value="5">Day 5</option>
         <option value="4">Day 4</option>
@@ -243,7 +244,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <h1>하루 하나,<br>말할 수 있는<br><span class="accent">영어 문법이 쌓입니다.</span></h1>
     <p class="lead">설명은 짧게, 연습은 많이. 매일 새 문법·표현 하나를 배우고 바로 퀴즐렛으로 복습하세요.</p>
     <div class="stat-strip">
-      <div class="stat"><div class="num">6</div><div class="label">Day 누적</div></div>
+      <div class="stat"><div class="num">7</div><div class="label">Day 누적</div></div>
       <div class="stat"><div class="num">3</div><div class="label">트랙 (스피킹·어미표현·기본문법)</div></div>
       <div class="stat"><div class="num">10</div><div class="label">문제 매일 연습</div></div>
       <div class="stat"><div class="num">AM 10</div><div class="label">매일 자동 업데이트</div></div>
@@ -256,6 +257,11 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
 
   <div class="card-grid" id="cardGrid">
     <!-- CARDS_START: 새 카드는 이 주석 바로 아래에 추가 (최신이 위) -->
+    <button class="post-card" data-track="basic" onclick="openDay(7)">
+      <div class="pc-meta"><span class="day-badge">Day 7</span><span class="tag basic">기본문법</span></div>
+      <h3>시간 전치사 — in / on / at</h3>
+      <p class="excerpt">월·계절·연도는 in, 요일·날짜는 on, 시각은 at — 예외 at night까지 한 번에 정리.</p>
+    </button>
     <button class="post-card" data-track="speaking" onclick="openDay(6)">
       <div class="pc-meta"><span class="day-badge">Day 6</span><span class="tag speaking">스피킹</span></div>
       <h3>애매하게 말하기 — kinda / sorta</h3>
@@ -290,6 +296,48 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
   </div>
 
   <!-- POSTS_START: 새 글은 이 주석 바로 아래에 추가 (최신이 위) -->
+
+  <div class="day-detail" id="detail7">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day7" data-track="basic">
+      <div class="meta">
+        <span class="day-badge">Day 7</span>
+        <span class="tag basic">기본문법</span>
+      </div>
+      <h2>시간 전치사 — in / on / at</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> in (월/계절/연도/아침·오후·저녁), on (요일/날짜), at (구체적 시각)</p>
+        <p><span class="label">주의</span> at night은 "저녁에"인데도 at을 씀 — 예외로 그냥 외우기</p>
+        <p><span class="label">예문</span> in July / on Monday / at 7 o'clock</p>
+      </div>
+
+      <h3 class="sub">연습 10개 — 빈칸에 in / on / at 넣기</h3>
+      <ol class="practice">
+        <li>I was born ___ 1998.</li>
+        <li>My birthday is ___ July.</li>
+        <li>Let's meet ___ Monday.</li>
+        <li>She wakes up ___ 7 o'clock.</li>
+        <li>We go on vacation ___ summer.</li>
+        <li>The meeting is ___ March 3rd.</li>
+        <li>I usually study ___ the morning.</li>
+        <li>He works late ___ night.</li>
+        <li>See you ___ Friday!</li>
+        <li>The store opens ___ 10 am.</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. in&nbsp;&nbsp; 2. in&nbsp;&nbsp; 3. on&nbsp;&nbsp; 4. at&nbsp;&nbsp; 5. in&nbsp;&nbsp; 6. on&nbsp;&nbsp; 7. in&nbsp;&nbsp; 8. at&nbsp;&nbsp; 9. on&nbsp;&nbsp; 10. at</p>
+      </details>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed7"><iframe src="https://quizlet.com/1196599486/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1196599486/daniel-grammar-day-7-inonat-%EC%8B%9C%EA%B0%84-%EC%A0%84%EC%B9%98%EC%82%AC-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
 
   <div class="day-detail" id="detail6">
     <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
