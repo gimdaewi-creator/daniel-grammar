@@ -218,6 +218,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <div class="nav-right">
       <select id="daySelect" onchange="if(this.value){ openDay(this.value); this.value=''; }">
         <option value="">Day 이동</option>
+        <option value="10">Day 10</option>
         <option value="9">Day 9</option>
         <option value="8">Day 8</option>
         <option value="7">Day 7</option>
@@ -246,7 +247,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <h1>하루 하나,<br>말할 수 있는<br><span class="accent">영어 문법이 쌓입니다.</span></h1>
     <p class="lead">설명은 짧게, 연습은 많이. 매일 새 문법·표현 하나를 배우고 바로 퀴즐렛으로 복습하세요.</p>
     <div class="stat-strip">
-      <div class="stat"><div class="num">9</div><div class="label">Day 누적</div></div>
+      <div class="stat"><div class="num">10</div><div class="label">Day 누적</div></div>
       <div class="stat"><div class="num">3</div><div class="label">트랙 (스피킹·어미표현·기본문법)</div></div>
       <div class="stat"><div class="num">10</div><div class="label">문제 매일 연습</div></div>
       <div class="stat"><div class="num">AM 10</div><div class="label">매일 자동 업데이트</div></div>
@@ -259,6 +260,11 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
 
   <div class="card-grid" id="cardGrid">
     <!-- CARDS_START: 새 카드는 이 주석 바로 아래에 추가 (최신이 위) -->
+    <button class="post-card" data-track="basic" onclick="openDay(10)">
+      <div class="pc-meta"><span class="day-badge">Day 10</span><span class="tag basic">기본문법</span></div>
+      <h3>Wh-의문사로 질문 만들기 — who/what/where/when/why/how</h3>
+      <p class="excerpt">의문사 + do/does/did + 주어 + 동사원형 순서로 자연스럽게 질문 만들기.</p>
+    </button>
     <button class="post-card" data-track="speaking" onclick="openDay(9)">
       <div class="pc-meta"><span class="day-badge">Day 9</span><span class="tag speaking">스피킹</span></div>
       <h3>부탁할 때 쓰는 축약형 — gimme / lemme</h3>
@@ -308,6 +314,52 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
   </div>
 
   <!-- POSTS_START: 새 글은 이 주석 바로 아래에 추가 (최신이 위) -->
+
+  <div class="day-detail" id="detail10">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day10" data-track="basic">
+      <div class="meta">
+        <span class="day-badge">Day 10</span>
+        <span class="tag basic">기본문법</span>
+      </div>
+      <h2>Wh-의문사로 질문 만들기 — who/what/where/when/why/how</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> who(누가·누구를) / what(무엇을) / where(어디서) / when(언제) / why(왜) / how(어떻게) + do/does/did + 주어 + 동사원형?</p>
+        <p><span class="label">주의</span> 의문사 뒤에도 do/does/did 순서는 그대로 지킴 — 동사는 항상 원형으로.</p>
+        <p><span class="label">예문</span> Where do you live? (어디 사세요?) / What do you do? (무슨 일 하세요?) / Why did you choose this job? (왜 이 직업을 선택했어요?) / How do you get to work? (어떻게 출근하세요?)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 알맞은 의문사 넣기</h3>
+      <ol class="practice">
+        <li>___ do you live?</li>
+        <li>___ do you do for work?</li>
+        <li>___ is your birthday?</li>
+        <li>___ did you choose this job?</li>
+        <li>___ do you get to work?</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. Where&nbsp;&nbsp; 2. What&nbsp;&nbsp; 3. When&nbsp;&nbsp; 4. Why&nbsp;&nbsp; 5. How</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — 의문사 질문에 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">Where do you live now? How did you come here today?</li>
+        <li class="qcard">What do you do? Do you like your job?</li>
+        <li class="qcard">What's your favorite day of the week, and why?</li>
+        <li class="qcard">What month do you like the most? Why do you like it?</li>
+        <li class="qcard">How often do you go on trips? Where do you like to travel?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed10"><iframe src="https://quizlet.com/1196946657/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1196946657/daniel-grammar-day-10-wh-%EC%9D%98%EB%AC%B8%EC%82%AC-%EC%A7%88%EB%AC%B8-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
 
   <div class="day-detail" id="detail9">
     <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
