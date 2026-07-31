@@ -218,6 +218,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <div class="nav-right">
       <select id="daySelect" onchange="if(this.value){ openDay(this.value); this.value=''; }">
         <option value="">Day 이동</option>
+        <option value="12">Day 12</option>
         <option value="11">Day 11</option>
         <option value="10">Day 10</option>
         <option value="9">Day 9</option>
@@ -248,7 +249,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <h1>하루 하나,<br>말할 수 있는<br><span class="accent">영어 문법이 쌓입니다.</span></h1>
     <p class="lead">설명은 짧게, 연습은 많이. 매일 새 문법·표현 하나를 배우고 바로 퀴즐렛으로 복습하세요.</p>
     <div class="stat-strip">
-      <div class="stat"><div class="num">11</div><div class="label">Day 누적</div></div>
+      <div class="stat"><div class="num">12</div><div class="label">Day 누적</div></div>
       <div class="stat"><div class="num">3</div><div class="label">트랙 (스피킹·어미표현·기본문법)</div></div>
       <div class="stat"><div class="num">10</div><div class="label">문제 매일 연습</div></div>
       <div class="stat"><div class="num">AM 10</div><div class="label">매일 자동 업데이트</div></div>
@@ -261,6 +262,11 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
 
   <div class="card-grid" id="cardGrid">
     <!-- CARDS_START: 새 카드는 이 주석 바로 아래에 추가 (최신이 위) -->
+    <button class="post-card" data-track="speaking" onclick="openDay(12)">
+      <div class="pc-meta"><span class="day-badge">Day 12</span><span class="tag speaking">스피킹</span></div>
+      <h3>편하게 부정하기 — ain't</h3>
+      <p class="excerpt">am not/is not/are not/has not/have not를 한 번에 퉁치는 캐주얼 부정어 ain't, 언제 어떻게 쓰는지 알아보기.</p>
+    </button>
     <button class="post-card" data-track="pattern" onclick="openDay(11)">
       <div class="pc-meta"><span class="day-badge">Day 11</span><span class="tag pattern">어미·표현</span></div>
       <h3>더 크다, 더 어렵다 — 비교급 -er vs more</h3>
@@ -320,6 +326,52 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
   </div>
 
   <!-- POSTS_START: 새 글은 이 주석 바로 아래에 추가 (최신이 위) -->
+
+  <div class="day-detail" id="detail12">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day12" data-track="speaking">
+      <div class="meta">
+        <span class="day-badge">Day 12</span>
+        <span class="tag speaking">스피킹</span>
+      </div>
+      <h2>편하게 부정하기 — ain't</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> am not/is not/are not → ain't (뜻: ~아니야) / has not/have not → ain't (뜻: ~하지 않았어) — 부정문을 한 단어로 퉁치는 캐주얼 표현</p>
+        <p><span class="label">주의</span> 매우 캐주얼하고 비격식적인 표현 — 문법적으로 "틀린" 형태로 여겨지므로 이메일·에세이 같은 격식 있는 글에는 절대 안 씀.</p>
+        <p><span class="label">예문</span> I ain't going. (안 갈 거야.) / She ain't home. (걔 집에 없어.) / We ain't done yet. (아직 안 끝났어.) / That ain't right. (그건 아니지.)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 ain't 넣기</h3>
+      <ol class="practice">
+        <li>I am not going to the party. → I ___ going to the party.</li>
+        <li>She is not home right now. → She ___ home right now.</li>
+        <li>We are not ready yet. → We ___ ready yet.</li>
+        <li>He has not finished his homework. → He ___ finished his homework.</li>
+        <li>They have not called me back. → They ___ called me back.</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. ain't&nbsp;&nbsp; 2. ain't&nbsp;&nbsp; 3. ain't&nbsp;&nbsp; 4. ain't&nbsp;&nbsp; 5. ain't</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — ain't 써서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">What's something you ain't done yet but really wanna try?</li>
+        <li class="qcard">Is there any food you ain't tried before?</li>
+        <li class="qcard">What's a place you ain't been to yet but wanna visit?</li>
+        <li class="qcard">Is there anything you ain't good at but wish you were?</li>
+        <li class="qcard">What's something you ain't got time for these days?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed12"><iframe src="https://quizlet.com/1197311569/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1197311569/daniel-grammar-day-12-aint-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
 
   <div class="day-detail" id="detail11">
     <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
