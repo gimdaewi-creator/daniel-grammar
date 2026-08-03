@@ -218,6 +218,8 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <div class="nav-right">
       <select id="daySelect" onchange="if(this.value){ openDay(this.value); this.value=''; }">
         <option value="">Day 이동</option>
+        <option value="14">Day 14</option>
+        <option value="13">Day 13</option>
         <option value="12">Day 12</option>
         <option value="11">Day 11</option>
         <option value="10">Day 10</option>
@@ -249,7 +251,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <h1>하루 하나,<br>말할 수 있는<br><span class="accent">영어 문법이 쌓입니다.</span></h1>
     <p class="lead">설명은 짧게, 연습은 많이. 매일 새 문법·표현 하나를 배우고 바로 퀴즐렛으로 복습하세요.</p>
     <div class="stat-strip">
-      <div class="stat"><div class="num">12</div><div class="label">Day 누적</div></div>
+      <div class="stat"><div class="num">14</div><div class="label">Day 누적</div></div>
       <div class="stat"><div class="num">3</div><div class="label">트랙 (스피킹·어미표현·기본문법)</div></div>
       <div class="stat"><div class="num">10</div><div class="label">문제 매일 연습</div></div>
       <div class="stat"><div class="num">AM 10</div><div class="label">매일 자동 업데이트</div></div>
@@ -262,6 +264,16 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
 
   <div class="card-grid" id="cardGrid">
     <!-- CARDS_START: 새 카드는 이 주석 바로 아래에 추가 (최신이 위) -->
+    <button class="post-card" data-track="basic" onclick="openDay(14)">
+      <div class="pc-meta"><span class="day-badge">Day 14</span><span class="tag basic">기본문법</span></div>
+      <h3>~가 있다 — There is / There are</h3>
+      <p class="excerpt">There is + 단수, There are + 복수로 존재를 말하는 법과 Is there / Are there 의문문까지.</p>
+    </button>
+    <button class="post-card" data-track="pattern" onclick="openDay(13)">
+      <div class="pc-meta"><span class="day-badge">Day 13</span><span class="tag pattern">어미·표현</span></div>
+      <h3>계속 해오고 있다 — 현재완료진행형 have been -ing</h3>
+      <p class="excerpt">have/has been -ing + for/since로 과거부터 지금까지 계속되는 일을 말하는 법.</p>
+    </button>
     <button class="post-card" data-track="speaking" onclick="openDay(12)">
       <div class="pc-meta"><span class="day-badge">Day 12</span><span class="tag speaking">스피킹</span></div>
       <h3>편하게 부정하기 — ain't</h3>
@@ -326,6 +338,98 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
   </div>
 
   <!-- POSTS_START: 새 글은 이 주석 바로 아래에 추가 (최신이 위) -->
+
+  <div class="day-detail" id="detail14">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day14" data-track="basic">
+      <div class="meta">
+        <span class="day-badge">Day 14</span>
+        <span class="tag basic">기본문법</span>
+      </div>
+      <h2>~가 있다 — There is / There are</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> There is + 단수/셀 수 없는 명사 (뜻: ~가 있다) / There are + 복수명사 (뜻: ~들이 있다)</p>
+        <p><span class="label">주의</span> 의문문은 Is there ~? / Are there ~?, 부정문은 There isn't / There aren't ~ — 뒤에 오는 명사의 수에 동사를 맞춤.</p>
+        <p><span class="label">예문</span> There is a cat outside. (밖에 고양이가 있어.) / There are two cups on the table. (테이블에 컵이 두 개 있어.) / Is there a bathroom near here? (근처에 화장실 있어요?) / There aren't any tickets left. (남은 티켓이 없어.)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 There is / There are / Is there / Are there 넣기</h3>
+      <ol class="practice">
+        <li>___ a cat under the table.</li>
+        <li>___ five apples in the basket.</li>
+        <li>___ a good restaurant near here?</li>
+        <li>___ any seats left in the theater?</li>
+        <li>___ no milk in the fridge.</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. There is&nbsp;&nbsp; 2. There are&nbsp;&nbsp; 3. Is there&nbsp;&nbsp; 4. Are there&nbsp;&nbsp; 5. There isn't</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — there is / there are 써서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">Is there a good coffee shop near your house?</li>
+        <li class="qcard">Are there any pets at your home?</li>
+        <li class="qcard">Is there anything you want to buy this week?</li>
+        <li class="qcard">Are there many restaurants in your neighborhood?</li>
+        <li class="qcard">Is there a place you really want to visit someday?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed14"><iframe src="https://quizlet.com/1197718860/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1197718860/daniel-grammar-day-14-there-is-there-are-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="day-detail" id="detail13">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day13" data-track="pattern">
+      <div class="meta">
+        <span class="day-badge">Day 13</span>
+        <span class="tag pattern">어미·표현</span>
+      </div>
+      <h2>계속 해오고 있다 — 현재완료진행형 have been -ing</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> have/has been + V-ing + for/since (뜻: (계속) ~해오고 있다) — 과거에 시작해서 지금까지 계속되는 일을 말할 때 씀</p>
+        <p><span class="label">주의</span> for는 기간(3 years, an hour)과 함께, since는 시작 시점(2020, yesterday) 뒤에 옴. know/like/believe 같은 상태동사는 진행형 불가 — 그냥 have p.p.로 씀.</p>
+        <p><span class="label">예문</span> I have been studying English for 3 years. (나는 3년째 영어를 공부해오고 있어.) / She has been living here since 2020. (그녀는 2020년부터 여기서 살고 있어.) / We have been waiting for an hour. (우리는 한 시간째 기다리고 있어.) / He has been working since morning. (그는 아침부터 일하고 있어.)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 have/has been -ing 형태로 넣기</h3>
+      <ol class="practice">
+        <li>I ___ (study) English for 3 years.</li>
+        <li>She ___ (live) here since 2020.</li>
+        <li>We ___ (wait) for an hour.</li>
+        <li>He ___ (work) since 7 am.</li>
+        <li>They ___ (play) soccer for two hours.</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. have been studying&nbsp;&nbsp; 2. has been living&nbsp;&nbsp; 3. have been waiting&nbsp;&nbsp; 4. has been working&nbsp;&nbsp; 5. have been playing</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — have been -ing 써서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">How long have you been studying English?</li>
+        <li class="qcard">How long have you been living in your current place?</li>
+        <li class="qcard">What's something you've been doing a lot lately?</li>
+        <li class="qcard">How long have you been working at your job?</li>
+        <li class="qcard">What have you been doing since this morning?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed13"><iframe src="https://quizlet.com/1197314556/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1197314556/daniel-grammar-day-13-have-been-ing-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
 
   <div class="day-detail" id="detail12">
     <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
