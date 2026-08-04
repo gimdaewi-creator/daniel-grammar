@@ -218,6 +218,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <div class="nav-right">
       <select id="daySelect" onchange="if(this.value){ openDay(this.value); this.value=''; }">
         <option value="">Day 이동</option>
+        <option value="15">Day 15</option>
         <option value="14">Day 14</option>
         <option value="13">Day 13</option>
         <option value="12">Day 12</option>
@@ -251,7 +252,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <h1>하루 하나,<br>말할 수 있는<br><span class="accent">영어 문법이 쌓입니다.</span></h1>
     <p class="lead">설명은 짧게, 연습은 많이. 매일 새 문법·표현 하나를 배우고 바로 퀴즐렛으로 복습하세요.</p>
     <div class="stat-strip">
-      <div class="stat"><div class="num">14</div><div class="label">Day 누적</div></div>
+      <div class="stat"><div class="num">15</div><div class="label">Day 누적</div></div>
       <div class="stat"><div class="num">3</div><div class="label">트랙 (스피킹·어미표현·기본문법)</div></div>
       <div class="stat"><div class="num">10</div><div class="label">문제 매일 연습</div></div>
       <div class="stat"><div class="num">AM 10</div><div class="label">매일 자동 업데이트</div></div>
@@ -264,6 +265,11 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
 
   <div class="card-grid" id="cardGrid">
     <!-- CARDS_START: 새 카드는 이 주석 바로 아래에 추가 (최신이 위) -->
+    <button class="post-card" data-track="speaking" onclick="openDay(15)">
+      <div class="pc-meta"><span class="day-badge">Day 15</span><span class="tag speaking">스피킹</span></div>
+      <h3>후회는 짧게 — should've / could've / would've</h3>
+      <p class="excerpt">should have, could have, would have를 원어민처럼 줄여서 후회·아쉬움을 말하는 법.</p>
+    </button>
     <button class="post-card" data-track="basic" onclick="openDay(14)">
       <div class="pc-meta"><span class="day-badge">Day 14</span><span class="tag basic">기본문법</span></div>
       <h3>~가 있다 — There is / There are</h3>
@@ -338,6 +344,52 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
   </div>
 
   <!-- POSTS_START: 새 글은 이 주석 바로 아래에 추가 (최신이 위) -->
+
+  <div class="day-detail" id="detail15">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day15" data-track="speaking">
+      <div class="meta">
+        <span class="day-badge">Day 15</span>
+        <span class="tag speaking">스피킹</span>
+      </div>
+      <h2>후회는 짧게 — should've / could've / would've</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> should have → should've (뜻: ~했어야 했는데) / could have → could've (뜻: ~할 수 있었는데) / would have → would've (뜻: ~했을 텐데) — 후회·아쉬움을 말할 때 쓰는 캐주얼 축약형</p>
+        <p><span class="label">주의</span> 발음은 shoulda/coulda/woulda처럼 편하게 하지만 글로 쓸 땐 should've — "should of"로 쓰지 않도록 주의. 이메일·에세이 같은 격식 있는 글에는 축약 안 씀.</p>
+        <p><span class="label">예문</span> I should've called you. (전화했어야 했는데.) / I could've helped you. (도와줄 수 있었는데.) / She would've come, but she was busy. (걔 왔을 텐데, 바빴어.) / We shouldn't have left early. (일찍 가지 말았어야 했는데.)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 should've / could've / would've 넣기</h3>
+      <ol class="practice">
+        <li>I should have told you earlier. → I ___ told you earlier.</li>
+        <li>She could have won the game. → She ___ won the game.</li>
+        <li>We would have gone, but it rained. → We ___ gone, but it rained.</li>
+        <li>He should have studied more. → He ___ studied more.</li>
+        <li>They could have called first. → They ___ called first.</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. should've&nbsp;&nbsp; 2. could've&nbsp;&nbsp; 3. would've&nbsp;&nbsp; 4. should've&nbsp;&nbsp; 5. could've</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — should've / could've / would've 써서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">What's something you should've done earlier this year?</li>
+        <li class="qcard">Is there anything you could've done differently in your last job?</li>
+        <li class="qcard">What's a trip you would've taken if you had more time or money?</li>
+        <li class="qcard">What's something you should've said to someone but didn't?</li>
+        <li class="qcard">Is there a decision you could've made better in the past?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed15"><iframe src="https://quizlet.com/1197859274/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1197859274/daniel-grammar-day-15-shouldvecouldvewouldve-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
 
   <div class="day-detail" id="detail14">
     <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
