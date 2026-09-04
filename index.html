@@ -218,6 +218,8 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <div class="nav-right">
       <select id="daySelect" onchange="if(this.value){ openDay(this.value); this.value=''; }">
         <option value="">Day 이동</option>
+        <option value="19">Day 19</option>
+        <option value="18">Day 18</option>
         <option value="17">Day 17</option>
         <option value="16">Day 16</option>
         <option value="15">Day 15</option>
@@ -254,7 +256,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <h1>하루 하나,<br>말할 수 있는<br><span class="accent">영어 문법이 쌓입니다.</span></h1>
     <p class="lead">설명은 짧게, 연습은 많이. 매일 새 문법·표현 하나를 배우고 바로 퀴즐렛으로 복습하세요.</p>
     <div class="stat-strip">
-      <div class="stat"><div class="num">17</div><div class="label">Day 누적</div></div>
+      <div class="stat"><div class="num">19</div><div class="label">Day 누적</div></div>
       <div class="stat"><div class="num">3</div><div class="label">트랙 (스피킹·어미표현·기본문법)</div></div>
       <div class="stat"><div class="num">10</div><div class="label">문제 매일 연습</div></div>
       <div class="stat"><div class="num">AM 10</div><div class="label">매일 자동 업데이트</div></div>
@@ -267,6 +269,16 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
 
   <div class="card-grid" id="cardGrid">
     <!-- CARDS_START: 새 카드는 이 주석 바로 아래에 추가 (최신이 위) -->
+    <button class="post-card" data-track="speaking" onclick="openDay(19)">
+      <div class="pc-meta"><span class="day-badge">Day 19</span><span class="tag speaking">스피킹</span></div>
+      <h3>말 사이 채우는 말 — like / I mean / you know</h3>
+      <p class="excerpt">원어민이 생각할 시간을 벌 때 쓰는 필러 like / I mean / you know — 뜻과 자연스럽게 넣는 위치 익히기.</p>
+    </button>
+    <button class="post-card" data-track="basic" onclick="openDay(18)">
+      <div class="pc-meta"><span class="day-badge">Day 18</span><span class="tag basic">기본문법</span></div>
+      <h3>할 수 있어, 해도 돼 — Modal verbs: can / could / may / might</h3>
+      <p class="excerpt">능력(can/could), 허락(may), 가능성(may/might)을 나타내는 조동사 구분하기.</p>
+    </button>
     <button class="post-card" data-track="pattern" onclick="openDay(17)">
       <div class="pc-meta"><span class="day-badge">Day 17</span><span class="tag pattern">어미·표현</span></div>
       <h3>꼭 해야 해 — must vs have to</h3>
@@ -356,6 +368,98 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
   </div>
 
   <!-- POSTS_START: 새 글은 이 주석 바로 아래에 추가 (최신이 위) -->
+
+  <div class="day-detail" id="detail19">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day19" data-track="speaking">
+      <div class="meta">
+        <span class="day-badge">Day 19</span>
+        <span class="tag speaking">스피킹</span>
+      </div>
+      <h2>말 사이 채우는 말 — like / I mean / you know</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> like (뜻: 그러니까, 막, 한 ~쯤) / I mean (뜻: 내 말은, 그러니까) / you know (뜻: 있잖아, 알지?) — 생각할 시간을 벌거나 말을 부드럽게 이어줄 때 문장 사이에 넣음</p>
+        <p><span class="label">주의</span> 친구·동료와의 캐주얼한 대화용. 발표·면접·글쓰기에서는 빼고, 한 문장에 여러 번 반복하면 산만하게 들림.</p>
+        <p><span class="label">예문</span> It was, like, really cold. (그게, 막, 진짜 추웠어.) / I mean, it's not bad. (내 말은, 나쁘진 않아.) / You know, the café near the station. (있잖아, 역 근처 카페.) / It took, like, two hours. (한 두 시간쯤 걸렸어.)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 like / I mean / you know 넣기</h3>
+      <ol class="practice">
+        <li>The movie was, ___, three hours long.</li>
+        <li>___, I didn't hate it. I just didn't love it.</li>
+        <li>She's, ___, my best friend from high school.</li>
+        <li>It's hard to explain, ___?</li>
+        <li>I was, ___, so tired after work.</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. like&nbsp;&nbsp; 2. I mean&nbsp;&nbsp; 3. like&nbsp;&nbsp; 4. you know&nbsp;&nbsp; 5. like</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — like / I mean / you know 자연스럽게 섞어서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">What do you usually do when you have free time?</li>
+        <li class="qcard">What's your favorite food? Why do you like it?</li>
+        <li class="qcard">How often do you eat out? What's your favorite restaurant?</li>
+        <li class="qcard">What kind of music do you like? Do you have a favorite singer or band?</li>
+        <li class="qcard">What do you do in the evening? What time do you usually go to bed?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed19"><iframe src="https://quizlet.com/1204674608/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1204674608/daniel-grammar-day-19-like-i-mean-you-know-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="day-detail" id="detail18">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day18" data-track="basic">
+      <div class="meta">
+        <span class="day-badge">Day 18</span>
+        <span class="tag basic">기본문법</span>
+      </div>
+      <h2>할 수 있어, 해도 돼 — Modal verbs: can / could / may / might</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> can (뜻: ~할 수 있다, 능력) / could (뜻: ~할 수 있었다, 과거 능력 또는 정중한 요청) / may (뜻: ~해도 된다, 허락 또는 가능성) / might (뜻: ~할 수도 있다, 약한 가능성)</p>
+        <p><span class="label">주의</span> can은 현재의 능력, could는 과거의 능력 또는 현재의 정중한 요청을 나타냄. may와 might는 가능성을 나타내는데 might가 더 약한 가능성을 뜻함.</p>
+        <p><span class="label">예문</span> Can you help me? (도와줄 수 있어?) / Could you pass the salt? (소금 좀 건네줄래?) / You may go now. (가도 돼.) / It might rain tomorrow. (내일 비가 올 수도 있어.)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 can / could / may / might 넣기</h3>
+      <ol class="practice">
+        <li>I ___ swim when I was young.</li>
+        <li>You ___ not smoke in the office.</li>
+        <li>She ___ speak three languages.</li>
+        <li>We ___ arrive late tomorrow.</li>
+        <li>___ I ask you a question?</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. could&nbsp;&nbsp; 2. may / can&nbsp;&nbsp; 3. can&nbsp;&nbsp; 4. might&nbsp;&nbsp; 5. May</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — can / could / may / might 써서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">What's something you can do really well?</li>
+        <li class="qcard">Could you teach me something you're good at?</li>
+        <li class="qcard">May I ask you a personal question about your family?</li>
+        <li class="qcard">What might you do next weekend?</li>
+        <li class="qcard">Is there anything you couldn't do as a kid but can do now?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed18"><iframe src="https://quizlet.com/1200974188/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1200974188/daniel-grammar-day-18-modal-verbs-can-could-may-might-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
 
   <div class="day-detail" id="detail17">
     <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
