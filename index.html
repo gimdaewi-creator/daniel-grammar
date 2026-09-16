@@ -218,6 +218,13 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <div class="nav-right">
       <select id="daySelect" onchange="if(this.value){ openDay(this.value); this.value=''; }">
         <option value="">Day 이동</option>
+        <option value="26">Day 26</option>
+        <option value="25">Day 25</option>
+        <option value="24">Day 24</option>
+        <option value="23">Day 23</option>
+        <option value="22">Day 22</option>
+        <option value="21">Day 21</option>
+        <option value="20">Day 20</option>
         <option value="19">Day 19</option>
         <option value="18">Day 18</option>
         <option value="17">Day 17</option>
@@ -256,7 +263,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <h1>하루 하나,<br>말할 수 있는<br><span class="accent">영어 문법이 쌓입니다.</span></h1>
     <p class="lead">설명은 짧게, 연습은 많이. 매일 새 문법·표현 하나를 배우고 바로 퀴즐렛으로 복습하세요.</p>
     <div class="stat-strip">
-      <div class="stat"><div class="num">19</div><div class="label">Day 누적</div></div>
+      <div class="stat"><div class="num">26</div><div class="label">Day 누적</div></div>
       <div class="stat"><div class="num">3</div><div class="label">트랙 (스피킹·어미표현·기본문법)</div></div>
       <div class="stat"><div class="num">10</div><div class="label">문제 매일 연습</div></div>
       <div class="stat"><div class="num">AM 10</div><div class="label">매일 자동 업데이트</div></div>
@@ -269,6 +276,41 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
 
   <div class="card-grid" id="cardGrid">
     <!-- CARDS_START: 새 카드는 이 주석 바로 아래에 추가 (최신이 위) -->
+    <button class="post-card" data-track="speaking" onclick="openDay(26)">
+      <div class="pc-meta"><span class="day-badge">Day 26</span><span class="tag speaking">스피킹</span></div>
+      <h3>몰라, 알겠어 — dunno / gotcha</h3>
+      <p class="excerpt">I don't know을 dunno로, I got you를 gotcha로 줄여서 캐주얼하게 모른다고 하거나 알겠다고 답하는 법.</p>
+    </button>
+    <button class="post-card" data-track="pattern" onclick="openDay(25)">
+      <div class="pc-meta"><span class="day-badge">Day 25</span><span class="tag pattern">어미·표현</span></div>
+      <h3>그랬을 거야, 그럴 리 없어 — 조동사 + have p.p. (추측)</h3>
+      <p class="excerpt">must have는 확신에 찬 추측, might/may have는 약한 추측, can't have는 강한 부정 추측 — 조동사 + have p.p.로 과거 일 추측하기.</p>
+    </button>
+    <button class="post-card" data-track="basic" onclick="openDay(24)">
+      <div class="pc-meta"><span class="day-badge">Day 24</span><span class="tag basic">기본문법</span></div>
+      <h3>미래를 말하는 두 가지 방법 — will vs be going to</h3>
+      <p class="excerpt">즉흥적으로 결정한 일은 will, 이미 정해진 계획이나 확실한 예측은 be going to — 미래 표현 두 가지 구분하기.</p>
+    </button>
+    <button class="post-card" data-track="speaking" onclick="openDay(23)">
+      <div class="pc-meta"><span class="day-badge">Day 23</span><span class="tag speaking">스피킹</span></div>
+      <h3>'d는 would? had? — I'd / She'd / We'd</h3>
+      <p class="excerpt">'d 뒤에 동사원형이 오면 would, p.p.가 오면 had — 말할 때 자연스럽게 쓰는 'd 축약형 구분하기.</p>
+    </button>
+    <button class="post-card" data-track="pattern" onclick="openDay(22)">
+      <div class="pc-meta"><span class="day-badge">Day 22</span><span class="tag pattern">어미·표현</span></div>
+      <h3>그렇지? — 부가의문문 Tag Questions</h3>
+      <p class="excerpt">긍정문엔 부정 부가의문문, 부정문엔 긍정 부가의문문을 붙여서 동의를 구하거나 확인하는 법.</p>
+    </button>
+    <button class="post-card" data-track="basic" onclick="openDay(21)">
+      <div class="pc-meta"><span class="day-badge">Day 21</span><span class="tag basic">기본문법</span></div>
+      <h3>어제 있었던 일 말하기 — 과거시제 규칙/불규칙 동사</h3>
+      <p class="excerpt">동사에 -ed를 붙이는 규칙 과거형과 went, saw, had 같은 불규칙 과거형, 그리고 did로 묻고 부정하는 법.</p>
+    </button>
+    <button class="post-card" data-track="pattern" onclick="openDay(20)">
+      <div class="pc-meta"><span class="day-badge">Day 20</span><span class="tag pattern">어미·표현</span></div>
+      <h3>가장 크다, 가장 어렵다 — 최상급 -est vs most</h3>
+      <p class="excerpt">짧은 형용사는 the -est, 긴 형용사는 the most로 최상급 만드는 법과 불규칙 최상급까지.</p>
+    </button>
     <button class="post-card" data-track="speaking" onclick="openDay(19)">
       <div class="pc-meta"><span class="day-badge">Day 19</span><span class="tag speaking">스피킹</span></div>
       <h3>말 사이 채우는 말 — like / I mean / you know</h3>
@@ -368,6 +410,322 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
   </div>
 
   <!-- POSTS_START: 새 글은 이 주석 바로 아래에 추가 (최신이 위) -->
+
+  <div class="day-detail" id="detail26">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day26" data-track="speaking">
+      <div class="meta">
+        <span class="day-badge">Day 26</span>
+        <span class="tag speaking">스피킹</span>
+      </div>
+      <h2>몰라, 알겠어 — dunno / gotcha</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> I don't know → dunno (뜻: 몰라, 모르겠어) / I got you → gotcha (뜻: 알겠어, 이해했어)</p>
+        <p><span class="label">주의</span> 아주 캐주얼한 대화체·문자용 표현 — 친한 사이에서만 쓰고, 이메일이나 격식 있는 자리에서는 쓰지 않음.</p>
+        <p><span class="label">예문</span> "Where's the bathroom?" "Dunno, ask him." (몰라, 걔한테 물어봐.) / A: Meet me at 5. B: Gotcha! (알겠어!) / I dunno what to do. (뭘 해야 할지 모르겠어.) / Gotcha, I'll be there. (알겠어, 갈게.)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 Dunno / Gotcha 알맞은 것으로 넣기</h3>
+      <ol class="practice">
+        <li>"Do you know what time it is?" "___, maybe around 3."</li>
+        <li>A: Can you send me the file by noon? B: ___, I'll do it now.</li>
+        <li>"What's for dinner?" "___, let's just order pizza."</li>
+        <li>A: Meet me at the station at 6. B: ___!</li>
+        <li>"Why did she leave early?" "___, she didn't say."</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. Dunno&nbsp;&nbsp; 2. Gotcha&nbsp;&nbsp; 3. Dunno&nbsp;&nbsp; 4. Gotcha&nbsp;&nbsp; 5. Dunno</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — dunno / gotcha 자연스럽게 섞어서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">Honestly, do you dunno what you want to do after graduation, or do you have a plan?</li>
+        <li class="qcard">If I told you to meet me at 7, would you just say "gotcha" or ask more questions first?</li>
+        <li class="qcard">What's something you dunno much about but would like to learn?</li>
+        <li class="qcard">Is there a topic your friends dunno you're actually really good at?</li>
+        <li class="qcard">When your boss gives you a task, do you usually just say "gotcha" or ask questions first?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed26"><iframe src="https://quizlet.com/1209328616/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1209328616/daniel-grammar-day-26-dunno-gotcha-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="day-detail" id="detail25">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day25" data-track="pattern">
+      <div class="meta">
+        <span class="day-badge">Day 25</span>
+        <span class="tag pattern">어미·표현</span>
+      </div>
+      <h2>그랬을 거야, 그럴 리 없어 — 조동사 + have p.p. (추측)</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> must have + p.p. (뜻: 틀림없이 ~했을 것이다, 강한 확신의 추측) / might have / may have + p.p. (뜻: ~했을지도 모른다, 약한 추측) / can't have + p.p. (뜻: ~했을 리 없다, 강한 부정 추측)</p>
+        <p><span class="label">주의</span> 조동사 + have + p.p.는 과거 일에 대한 지금 시점의 추측을 나타냄 — 확신 정도는 must(강한 확신) > might/may(약한 추측) > can't(강한 부정) 순으로 다름.</p>
+        <p><span class="label">예문</span> She must have left already. (그녀는 틀림없이 이미 떠났을 거야.) / He might have forgotten the meeting. (그는 회의를 깜빡했을지도 몰라.) / They may have missed the bus. (그들은 버스를 놓쳤을지도 몰라.) / You can't have finished already! (너 벌써 끝냈을 리가 없어!)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 must have / might(may) have / can't have 알맞은 형태로 넣기</h3>
+      <ol class="practice">
+        <li>The ground is wet. It ___ (rain) last night.</li>
+        <li>She's not picking up. She ___ (lose) her phone.</li>
+        <li>He got an A on the test. He ___ (study) hard.</li>
+        <li>That ___ (be) a mistake — he's always on time.</li>
+        <li>They're late. They ___ (get) stuck in traffic.</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. must have rained&nbsp;&nbsp; 2. might have lost&nbsp;&nbsp; 3. must have studied&nbsp;&nbsp; 4. can't have been&nbsp;&nbsp; 5. might have gotten</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — must have / might have / can't have 써서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">Your friend looks exhausted today — what do you think might have happened last night?</li>
+        <li class="qcard">You see a broken window and no one around — what do you think must have happened?</li>
+        <li class="qcard">A classmate didn't show up for the exam — what could have happened to them?</li>
+        <li class="qcard">Your package still hasn't arrived — what might have happened to it?</li>
+        <li class="qcard">Someone left a huge mess in the kitchen — what do you think must have happened here?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed25">퀴즐렛 세트 준비 중…</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="day-detail" id="detail24">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day24" data-track="basic">
+      <div class="meta">
+        <span class="day-badge">Day 24</span>
+        <span class="tag basic">기본문법</span>
+      </div>
+      <h2>미래를 말하는 두 가지 방법 — will vs be going to</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> will + 동사원형 (뜻: ~할 것이다, 말하는 순간 즉흥적으로 결정하거나 단순 예측) / am/is/are going to + 동사원형 (뜻: ~할 예정이다, 이미 정해진 계획이나 근거 있는 예측)</p>
+        <p><span class="label">주의</span> 미리 계획한 일엔 going to, 그 자리에서 결정한 일엔 will. 눈에 보이는 증거로 예측할 땐 going to가 더 자연스러움 (예: 먹구름 보고 "It's going to rain").</p>
+        <p><span class="label">예문</span> I'll answer the phone. (내가 전화 받을게.) / I'm going to visit my parents this weekend. (이번 주말에 부모님 뵈러 갈 거야.) / It's going to rain — look at those clouds. (비 올 것 같아 — 저 구름 좀 봐.) / I think it will be sunny tomorrow. (내일은 맑을 것 같아.)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 will / be going to 알맞은 형태로 넣기</h3>
+      <ol class="practice">
+        <li>I ___ (call) you when I get home.</li>
+        <li>We ___ (visit) Japan next month — we already booked the flights.</li>
+        <li>Look at those clouds! It ___ (rain) soon.</li>
+        <li>I think she ___ (like) this gift.</li>
+        <li>He ___ (start) a new job next Monday — it's all set.</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. will call&nbsp;&nbsp; 2. are going to visit&nbsp;&nbsp; 3. is going to rain&nbsp;&nbsp; 4. will like&nbsp;&nbsp; 5. is going to start</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — will / be going to 써서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">What are you going to do this weekend?</li>
+        <li class="qcard">Do you think it will rain tomorrow?</li>
+        <li class="qcard">What's one thing you're going to change about your daily routine?</li>
+        <li class="qcard">Where do you think you'll be five years from now?</li>
+        <li class="qcard">What are you going to have for dinner tonight?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed24">퀴즐렛 세트 준비 중…</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="day-detail" id="detail23">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day23" data-track="speaking">
+      <div class="meta">
+        <span class="day-badge">Day 23</span>
+        <span class="tag speaking">스피킹</span>
+      </div>
+      <h2>'d는 would? had? — I'd / She'd / We'd</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> 주어 + 'd + 동사원형 (뜻: ~할 텐데, would 축약) / 주어 + 'd + p.p. (뜻: ~했었다, had 축약) — 뒤에 오는 동사 형태로 구분</p>
+        <p><span class="label">주의</span> 'd 뒤에 동사원형이 오면 would, 과거분사(p.p.)가 오면 had. 말할 때 자연스럽게 줄여 쓰지만 격식 있는 글에서는 풀어 쓰는 게 좋음.</p>
+        <p><span class="label">예문</span> I'd love to go. (가고 싶어.) / I'd already left when she called. (그녀가 전화했을 때 난 이미 떠났었어.) / She'd help you if she could. (그녀는 할 수 있다면 도와줄 텐데.) / We'd never met before that day. (우리는 그날 전에 만난 적이 없었어.)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 'd 축약형 넣기</h3>
+      <ol class="practice">
+        <li>I would love that. → I ___ love that.</li>
+        <li>She had already gone. → She ___ already gone.</li>
+        <li>He would help if he could. → He ___ help if he could.</li>
+        <li>We had never seen snow before. → We ___ never seen snow before.</li>
+        <li>They would come if invited. → They ___ come if invited.</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. I'd&nbsp;&nbsp; 2. She'd&nbsp;&nbsp; 3. He'd&nbsp;&nbsp; 4. We'd&nbsp;&nbsp; 5. They'd</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — 'd 써서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">What's something you'd like to learn this year?</li>
+        <li class="qcard">If you had a million dollars, what would you buy?</li>
+        <li class="qcard">What's a place you'd love to visit someday?</li>
+        <li class="qcard">Who's someone you'd love to meet in person?</li>
+        <li class="qcard">What's something you'd never do, even for money?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed23">퀴즐렛 세트 준비 중…</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="day-detail" id="detail22">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day22" data-track="pattern">
+      <div class="meta">
+        <span class="day-badge">Day 22</span>
+        <span class="tag pattern">어미·표현</span>
+      </div>
+      <h2>그렇지? — 부가의문문 Tag Questions</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> 긍정문 + 부정 부가의문문 (뜻: ~그렇지?) / 부정문 + 긍정 부가의문문 (뜻: ~안 그래?) — be/do/have/조동사를 그대로 가져와 주어는 대명사로 바꿔 붙임</p>
+        <p><span class="label">주의</span> 캐주얼한 대화체에서 동의를 구하거나 확인할 때 씀 — 편지·에세이 같은 격식 있는 글엔 잘 안 씀. 억양을 내리면 확인, 올리면 진짜 질문이 됨.</p>
+        <p><span class="label">예문</span> You're coming, aren't you? (너 올 거지, 그렇지?) / She doesn't like coffee, does she? (걔 커피 안 좋아하지, 그렇지?) / You've met him before, haven't you? (전에 만난 적 있지, 그렇지?) / Let's go, shall we? (가자, 그럴까?)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 부가의문문 넣기</h3>
+      <ol class="practice">
+        <li>You're a student, ___?</li>
+        <li>She doesn't drink coffee, ___?</li>
+        <li>They've finished the project, ___?</li>
+        <li>He can't swim, ___?</li>
+        <li>Let's take a break, ___?</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. aren't you&nbsp;&nbsp; 2. does she&nbsp;&nbsp; 3. haven't they&nbsp;&nbsp; 4. can he&nbsp;&nbsp; 5. shall we</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — 부가의문문에 자연스럽게 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">This coffee is amazing, isn't it?</li>
+        <li class="qcard">You've been to Seoul before, haven't you?</li>
+        <li class="qcard">It's pretty cold today, isn't it?</li>
+        <li class="qcard">You don't really like mornings, do you?</li>
+        <li class="qcard">We should hang out sometime, shouldn't we?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed22">퀴즐렛 세트 준비 중…</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="day-detail" id="detail21">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day21" data-track="basic">
+      <div class="meta">
+        <span class="day-badge">Day 21</span>
+        <span class="tag basic">기본문법</span>
+      </div>
+      <h2>어제 있었던 일 말하기 — 과거시제 규칙/불규칙 동사</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> 동사원형 + -ed (뜻: ~했다, 규칙 과거형) / 불규칙 동사는 형태를 따로 암기 — go→went, see→saw, have→had (뜻: ~했다)</p>
+        <p><span class="label">주의</span> study→studied처럼 자음+y는 y를 i로 바꾸고 -ed. 부정문·의문문은 did + 동사원형 — didn't watch, Did you watch?처럼 동사는 원형으로 돌아감.</p>
+        <p><span class="label">예문</span> I watched a movie last night. (어젯밤에 영화를 봤어.) / She went to the gym yesterday. (그녀는 어제 헬스장에 갔어.) / We didn't eat breakfast this morning. (오늘 아침에 밥 안 먹었어.) / Did you sleep well last night? (어젯밤에 잘 잤어?)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 과거형 넣기</h3>
+      <ol class="practice">
+        <li>I ___ (watch) a movie last night.</li>
+        <li>She ___ (go) to the gym yesterday.</li>
+        <li>We ___ (not eat) breakfast this morning.</li>
+        <li>___ you ___ (sleep) well last night?</li>
+        <li>He ___ (study) English for two hours yesterday.</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. watched&nbsp;&nbsp; 2. went&nbsp;&nbsp; 3. didn't eat&nbsp;&nbsp; 4. Did / sleep&nbsp;&nbsp; 5. studied</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — 과거시제 써서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">What did you have for breakfast this morning?</li>
+        <li class="qcard">What did you do last weekend?</li>
+        <li class="qcard">Where did you go on your last vacation?</li>
+        <li class="qcard">What time did you wake up today?</li>
+        <li class="qcard">Did you watch anything good last night?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed21">퀴즐렛 세트 준비 중…</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="day-detail" id="detail20">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day20" data-track="pattern">
+      <div class="meta">
+        <span class="day-badge">Day 20</span>
+        <span class="tag pattern">어미·표현</span>
+      </div>
+      <h2>가장 크다, 가장 어렵다 — 최상급 -est vs most</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> the + 1음절 형용사-est (뜻: 가장 ~한) / the most + 2음절 이상 형용사 (뜻: 가장 ~한)</p>
+        <p><span class="label">주의</span> 불규칙 최상급 조심 — good→the best, bad→the worst, far→the farthest. the를 빼먹지 않도록 주의.</p>
+        <p><span class="label">예문</span> This is the biggest bag. (이게 가장 큰 가방이야.) / This is the most difficult question. (이게 가장 어려운 질문이야.) / She is the tallest in her family. (그녀가 가족 중 제일 커.) / This is the best coffee I've had. (이게 내가 마셔본 것 중 최고의 커피야.)</p>
+      </div>
+
+      <h3 class="sub">연습 5개 — 빈칸에 최상급 넣기</h3>
+      <ol class="practice">
+        <li>This is the ___ (big) mountain in Korea.</li>
+        <li>She is the ___ (smart) student in class.</li>
+        <li>This is the ___ (expensive) restaurant in town.</li>
+        <li>Today is the ___ (cold) day this winter.</li>
+        <li>He is the ___ (good) player on the team.</li>
+      </ol>
+
+      <details class="answers">
+        <summary>정답 보기</summary>
+        <p>1. biggest&nbsp;&nbsp; 2. smartest&nbsp;&nbsp; 3. most expensive&nbsp;&nbsp; 4. coldest&nbsp;&nbsp; 5. best</p>
+      </details>
+
+      <h3 class="sub">질문 카드 — 최상급 써서 답해보기</h3>
+      <ul class="qcards">
+        <li class="qcard">What's the best restaurant you've ever been to?</li>
+        <li class="qcard">Who's the tallest person in your family?</li>
+        <li class="qcard">What's the most difficult thing about learning English?</li>
+        <li class="qcard">What's the biggest city you've ever visited?</li>
+        <li class="qcard">What's the best gift you've ever given someone?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 복습하기</h4>
+        <div class="embed-slot" id="embed20">퀴즐렛 세트 준비 중…</div>
+      </div>
+    </section>
+  </div>
 
   <div class="day-detail" id="detail19">
     <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
