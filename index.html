@@ -218,6 +218,9 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <div class="nav-right">
       <select id="daySelect" onchange="if(this.value){ openDay(this.value); this.value=''; }">
         <option value="">Day 이동</option>
+        <option value="61">Day 61</option>
+        <option value="60">Day 60</option>
+        <option value="59">Day 59</option>
         <option value="58">Day 58</option>
         <option value="57">Day 57</option>
         <option value="56">Day 56</option>
@@ -295,9 +298,9 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <h1>하루 하나,<br>말할 수 있는<br><span class="accent">영어 문법이 쌓입니다.</span></h1>
     <p class="lead">설명은 짧게, 연습은 많이. 매일 새 문법·표현 하나를 배우고 바로 퀴즐렛으로 복습하세요.</p>
     <div class="stat-strip">
-      <div class="stat"><div class="num">58</div><div class="label">Day 누적</div></div>
+      <div class="stat"><div class="num">61</div><div class="label">Day 누적</div></div>
       <div class="stat"><div class="num">3</div><div class="label">트랙 (스피킹·어미표현·기본문법)</div></div>
-      <div class="stat"><div class="num">10</div><div class="label">문제 매일 연습</div></div>
+      <div class="stat"><div class="num">12</div><div class="label">문제 매일 연습</div></div>
       <div class="stat"><div class="num">AM 10</div><div class="label">매일 자동 업데이트</div></div>
     </div>
   </div>
@@ -308,6 +311,21 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
 
   <div class="card-grid" id="cardGrid">
     <!-- CARDS_START: 새 카드는 이 주석 바로 아래에 추가 (최신이 위) -->
+    <button class="post-card" data-track="basic" onclick="openDay(61)">
+      <div class="pc-meta"><span class="day-badge">Day 61</span><span class="tag basic">기본문법</span></div>
+      <h3>그때 ~하고 있었어 — 과거진행형 was / were + -ing</h3>
+      <p class="excerpt">과거 그 순간에 하던 일, '~하고 있었어'를 was / were + -ing로 소리 내서 말하기.</p>
+    </button>
+    <button class="post-card" data-track="pattern" onclick="openDay(60)">
+      <div class="pc-meta"><span class="day-badge">Day 60</span><span class="tag pattern">어미·표현</span></div>
+      <h3>~할까 생각 중이야 — I'm thinking of ~ing</h3>
+      <p class="excerpt">아직 정하지 않은 계획, '~할까 생각 중이야'를 thinking of + -ing로 소리 내서 말하기.</p>
+    </button>
+    <button class="post-card" data-track="speaking" onclick="openDay(59)">
+      <div class="pc-meta"><span class="day-badge">Day 59</span><span class="tag speaking">스피킹</span></div>
+      <h3>막 ~하려던 참이야 — I'm about to / I was about to</h3>
+      <p class="excerpt">아주 가까운 순간의 일, '막 ~하려던 참이야'를 about to로 소리 내서 말하기.</p>
+    </button>
     <button class="post-card" data-track="basic" onclick="openDay(58)">
       <div class="pc-meta"><span class="day-badge">Day 58</span><span class="tag basic">기본문법</span></div>
       <h3>즐기는 건 -ing, 원하는 건 to — 동명사 vs to부정사</h3>
@@ -602,6 +620,183 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
   </div>
 
   <!-- POSTS_START: 새 글은 이 주석 바로 아래에 추가 (최신이 위) -->
+  <div class="day-detail" id="detail61">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day61" data-track="basic">
+      <div class="meta">
+        <span class="day-badge">Day 61</span>
+        <span class="tag basic">기본문법</span>
+      </div>
+      <h2>그때 ~하고 있었어 — 과거진행형 was / were + -ing</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> I / He / She was + 동사-ing (뜻: ~하고 있었어) &nbsp;|&nbsp; You / We / They were + 동사-ing (뜻: ~하고 있었어) &nbsp;|&nbsp; What were you doing? (뜻: 뭐 하고 있었어?)</p>
+        <p><span class="label">주의</span> 과거의 '그 순간'에 하던 일에 써요. when과 자주 같이 써요 — I was sleeping when you called. know·like 같은 상태동사엔 안 써요.</p>
+        <p><span class="label">예문</span> I was watching TV. (TV 보고 있었어.) / What were you doing last night? (어젯밤에 뭐 하고 있었어?) / I was taking a shower when you called. (네가 전화했을 때 샤워하고 있었어.)</p>
+      </div>
+
+      <h3 class="sub">① 따라 말하기 — 3번씩 소리 내서</h3>
+      <ol class="practice">
+        <li>I was studying at 9 last night.</li>
+        <li>We were having dinner when it started to rain.</li>
+        <li>What were you doing this morning?</li>
+      </ol>
+
+      <h3 class="sub">② 바꿔 말하기 — 단어만 바꿔서 말해 보기</h3>
+      <ol class="practice">
+        <li>I was <b>reading a book</b>. → [playing games / cooking dinner / walking my dog]</li>
+        <li><b>They</b> were waiting for the bus. → [We / My friends / She]</li>
+        <li>I was sleeping when <b>you called</b>. → [the phone rang / my mom came home / it started to snow]</li>
+      </ol>
+
+      <h3 class="sub">③ 말로 바꾸기 — 과거진행형으로 바꿔 말하기</h3>
+      <ol class="practice">
+        <li>I watch TV. (at 8 last night) → ?</li>
+        <li>She plays tennis. (yesterday at 3) → ?</li>
+        <li>Do you work? (when I called) → ?</li>
+      </ol>
+
+      <details class="answers">
+        <summary>모범 답안 보기</summary>
+        <p>② 1. I was playing games. / I was cooking dinner. / I was walking my dog.<br>
+        &nbsp;&nbsp;&nbsp;2. We were waiting for the bus. / My friends were waiting for the bus. / She was waiting for the bus.<br>
+        &nbsp;&nbsp;&nbsp;3. I was sleeping when the phone rang. / I was sleeping when my mom came home. / I was sleeping when it started to snow.</p>
+        <p>③ 1. I was watching TV at 8 last night.&nbsp;&nbsp; 2. She was playing tennis yesterday at 3.&nbsp;&nbsp; 3. Were you working when I called?</p>
+      </details>
+
+      <h3 class="sub">④ 대답해 보기 — was / were + -ing로 말해 보기</h3>
+      <ul class="qcards">
+        <li class="qcard">What were you doing at 8 last night?</li>
+        <li class="qcard">What were you doing this time yesterday?</li>
+        <li class="qcard">What were you thinking about on your way here today?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 말하기 복습</h4>
+        <div class="embed-slot" id="embed61"><iframe src="https://quizlet.com/1234474439/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1234474439/daniel-grammar-day-61-past-continuous-waswere-ing-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="day-detail" id="detail60">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day60" data-track="pattern">
+      <div class="meta">
+        <span class="day-badge">Day 60</span>
+        <span class="tag pattern">어미·표현</span>
+      </div>
+      <h2>~할까 생각 중이야 — I'm thinking of ~ing</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> I'm thinking of (뜻: ~할까 생각 중이야) + 동사-ing &nbsp;|&nbsp; Are you thinking of (뜻: ~할 생각이야?) + 동사-ing &nbsp;|&nbsp; I'm thinking about (뜻: ~에 대해 고민 중이야) + 명사/-ing</p>
+        <p><span class="label">주의</span> 아직 확정 안 된 계획에 써요 (확정이면 I'm gonna). of 뒤엔 꼭 -ing — I'm thinking of buy (X).</p>
+        <p><span class="label">예문</span> I'm thinking of getting a dog. (강아지 키울까 생각 중이야.) / Are you thinking of moving? (너 이사할 생각이야?) / I'm thinking about my trip. (여행 생각하고 있어.)</p>
+      </div>
+
+      <h3 class="sub">① 따라 말하기 — 3번씩 소리 내서</h3>
+      <ol class="practice">
+        <li>I'm thinking of learning the guitar.</li>
+        <li>I'm thinking of going to bed early tonight.</li>
+        <li>Are you thinking of joining the club?</li>
+      </ol>
+
+      <h3 class="sub">② 바꿔 말하기 — 단어만 바꿔서 말해 보기</h3>
+      <ol class="practice">
+        <li>I'm thinking of <b>cutting my hair</b>. → [buying a new phone / taking a trip / changing my plan]</li>
+        <li>Are you thinking of <b>going out</b>? → [eating out / moving / quitting]</li>
+        <li><b>My mom</b> is thinking of getting a cat. → [My dad / My sister / My best friend]</li>
+      </ol>
+
+      <h3 class="sub">③ 말로 바꾸기 — thinking of로 바꿔 말하기</h3>
+      <ol class="practice">
+        <li>Maybe I will buy a new bike. → ?</li>
+        <li>Maybe we will go to Seoul. → ?</li>
+        <li>Do you plan to learn Chinese? → ?</li>
+      </ol>
+
+      <details class="answers">
+        <summary>모범 답안 보기</summary>
+        <p>② 1. I'm thinking of buying a new phone. / I'm thinking of taking a trip. / I'm thinking of changing my plan.<br>
+        &nbsp;&nbsp;&nbsp;2. Are you thinking of eating out? / Are you thinking of moving? / Are you thinking of quitting?<br>
+        &nbsp;&nbsp;&nbsp;3. My dad is thinking of getting a cat. / My sister is thinking of getting a cat. / My best friend is thinking of getting a cat.</p>
+        <p>③ 1. I'm thinking of buying a new bike.&nbsp;&nbsp; 2. We're thinking of going to Seoul.&nbsp;&nbsp; 3. Are you thinking of learning Chinese?</p>
+      </details>
+
+      <h3 class="sub">④ 대답해 보기 — thinking of로 말해 보기</h3>
+      <ul class="qcards">
+        <li class="qcard">What are you thinking of doing this weekend?</li>
+        <li class="qcard">Where are you thinking of traveling next?</li>
+        <li class="qcard">Is there a new hobby you're thinking of starting?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 말하기 복습</h4>
+        <div class="embed-slot" id="embed60"><iframe src="https://quizlet.com/1234148592/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1234148592/daniel-grammar-day-60-im-thinking-of-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="day-detail" id="detail59">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day59" data-track="speaking">
+      <div class="meta">
+        <span class="day-badge">Day 59</span>
+        <span class="tag speaking">스피킹</span>
+      </div>
+      <h2>막 ~하려던 참이야 — I'm about to / I was about to</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> I'm about to (뜻: 막 ~하려는 참이야) + 동사원형 &nbsp;|&nbsp; I was about to (뜻: 막 ~하려던 참이었어) / I was just about to (뜻: 딱 ~하려던 참이었어)</p>
+        <p><span class="label">주의</span> 몇 초~몇 분 안의 아주 가까운 일에만 써요 (내일 일은 gonna). 말할 땐 about to를 '어바우루'처럼 빠르게 이어 말해요.</p>
+        <p><span class="label">예문</span> I'm about to leave. (나 이제 막 나가려고.) / I was about to call you! (너한테 막 전화하려던 참이었어!) / The movie is about to start. (영화 곧 시작해.)</p>
+      </div>
+
+      <h3 class="sub">① 따라 말하기 — 3번씩 소리 내서</h3>
+      <ol class="practice">
+        <li>I'm about to head out.</li>
+        <li>I was just about to call you!</li>
+        <li>Hurry up, the bus is about to leave.</li>
+      </ol>
+
+      <h3 class="sub">② 바꿔 말하기 — 단어만 바꿔서 말해 보기</h3>
+      <ol class="practice">
+        <li>I'm about to <b>eat dinner</b>. → [take a shower / go to bed / start my homework]</li>
+        <li>I was about to <b>text you</b>. → [call you / ask you / leave]</li>
+        <li>The <b>movie</b> is about to start. → [class / game / concert]</li>
+      </ol>
+
+      <h3 class="sub">③ 말로 바꾸기 — about to로 바꿔 말하기</h3>
+      <ol class="practice">
+        <li>I'm going to leave in a minute. → ?</li>
+        <li>I was going to call you right then. → ?</li>
+        <li>Are you going to go out now? → ?</li>
+      </ol>
+
+      <details class="answers">
+        <summary>모범 답안 보기</summary>
+        <p>② 1. I'm about to take a shower. / I'm about to go to bed. / I'm about to start my homework.<br>
+        &nbsp;&nbsp;&nbsp;2. I was about to call you. / I was about to ask you. / I was about to leave.<br>
+        &nbsp;&nbsp;&nbsp;3. The class is about to start. / The game is about to start. / The concert is about to start.</p>
+        <p>③ 1. I'm about to leave.&nbsp;&nbsp; 2. I was just about to call you.&nbsp;&nbsp; 3. Are you about to go out?</p>
+      </details>
+
+      <h3 class="sub">④ 대답해 보기 — about to로 말해 보기</h3>
+      <ul class="qcards">
+        <li class="qcard">What are you about to do after class?</li>
+        <li class="qcard">What were you about to do when you came here today?</li>
+        <li class="qcard">What do you usually do when class is about to end?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 말하기 복습</h4>
+        <div class="embed-slot" id="embed59"><iframe src="https://quizlet.com/1234114771/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1234114771/daniel-grammar-day-59-im-about-to-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
+
   <div class="day-detail" id="detail58">
     <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
     <section class="day-section" id="day58" data-track="basic">
