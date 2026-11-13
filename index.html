@@ -218,6 +218,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <div class="nav-right">
       <select id="daySelect" onchange="if(this.value){ openDay(this.value); this.value=''; }">
         <option value="">Day 이동</option>
+        <option value="62">Day 62</option>
         <option value="61">Day 61</option>
         <option value="60">Day 60</option>
         <option value="59">Day 59</option>
@@ -298,7 +299,7 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
     <h1>하루 하나,<br>말할 수 있는<br><span class="accent">영어 문법이 쌓입니다.</span></h1>
     <p class="lead">설명은 짧게, 연습은 많이. 매일 새 문법·표현 하나를 배우고 바로 퀴즐렛으로 복습하세요.</p>
     <div class="stat-strip">
-      <div class="stat"><div class="num">61</div><div class="label">Day 누적</div></div>
+      <div class="stat"><div class="num">62</div><div class="label">Day 누적</div></div>
       <div class="stat"><div class="num">3</div><div class="label">트랙 (스피킹·어미표현·기본문법)</div></div>
       <div class="stat"><div class="num">12</div><div class="label">문제 매일 연습</div></div>
       <div class="stat"><div class="num">AM 10</div><div class="label">매일 자동 업데이트</div></div>
@@ -311,6 +312,11 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
 
   <div class="card-grid" id="cardGrid">
     <!-- CARDS_START: 새 카드는 이 주석 바로 아래에 추가 (최신이 위) -->
+    <button class="post-card" data-track="speaking" onclick="openDay(62)">
+      <div class="pc-meta"><span class="day-badge">Day 62</span><span class="tag speaking">스피킹</span></div>
+      <h3>미안, 괜찮아, 됐어 — My bad / No worries / Never mind</h3>
+      <p class="excerpt">친구 사이 가볍게 사과하고, 괜찮다고 하고, 됐다고 말하는 원어민 표현.</p>
+    </button>
     <button class="post-card" data-track="basic" onclick="openDay(61)">
       <div class="pc-meta"><span class="day-badge">Day 61</span><span class="tag basic">기본문법</span></div>
       <h3>그때 ~하고 있었어 — 과거진행형 was / were + -ing</h3>
@@ -620,6 +626,65 @@ footer .copyright { margin-top: 18px; font-size: 0.75rem; color: #6b6b72; }
   </div>
 
   <!-- POSTS_START: 새 글은 이 주석 바로 아래에 추가 (최신이 위) -->
+  <div class="day-detail" id="detail62">
+    <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
+    <section class="day-section" id="day62" data-track="speaking">
+      <div class="meta">
+        <span class="day-badge">Day 62</span>
+        <span class="tag speaking">스피킹</span>
+      </div>
+      <h2>미안, 괜찮아, 됐어 — My bad / No worries / Never mind</h2>
+
+      <div class="pattern-box">
+        <p><span class="label">패턴</span> My bad. (뜻: 내 실수야, 미안) &nbsp;|&nbsp; No worries. (뜻: 괜찮아, 신경 쓰지 마) &nbsp;|&nbsp; Never mind. (뜻: 됐어, 방금 한 말 신경 쓰지 마)</p>
+        <p><span class="label">주의</span> 친구끼리 쓰는 캐주얼한 말이에요. 큰 실수나 윗사람에겐 I'm sorry / That's okay가 좋아요. 사과에 대한 대답은 Never mind가 아니라 No worries!</p>
+        <p><span class="label">예문</span> Oops, my bad! (앗, 내 실수!) / No worries, it happens. (괜찮아, 그럴 수도 있지.) / Never mind, I found it. (됐어, 찾았어.)</p>
+      </div>
+
+      <h3 class="sub">① 따라 말하기 — 3번씩 소리 내서</h3>
+      <ol class="practice">
+        <li>My bad, I forgot to text you back.</li>
+        <li>No worries, take your time.</li>
+        <li>Never mind, it's not important.</li>
+      </ol>
+
+      <h3 class="sub">② 바꿔 말하기 — 단어만 바꿔서 말해 보기</h3>
+      <ol class="practice">
+        <li>My bad, I <b>forgot your name</b>. → [was late / took your seat / spilled your water]</li>
+        <li>No worries, <b>take your time</b>. → [it happens / I got it / we still have time]</li>
+        <li>Never mind, <b>I found it</b>. → [I'll do it myself / it's not a big deal / forget I asked]</li>
+      </ol>
+
+      <h3 class="sub">③ 상황에 맞게 말하기 — My bad / No worries / Never mind 골라 말하기</h3>
+      <ol class="practice">
+        <li>You stepped on your friend's foot. → ?</li>
+        <li>Your friend says, "Sorry I'm late!" → ?</li>
+        <li>You asked your friend for help, but you just found the answer. → ?</li>
+      </ol>
+
+      <details class="answers">
+        <summary>모범 답안 보기</summary>
+        <p>② 1. My bad, I was late. / My bad, I took your seat. / My bad, I spilled your water.<br>
+        &nbsp;&nbsp;&nbsp;2. No worries, it happens. / No worries, I got it. / No worries, we still have time.<br>
+        &nbsp;&nbsp;&nbsp;3. Never mind, I'll do it myself. / Never mind, it's not a big deal. / Never mind, forget I asked.</p>
+        <p>③ 1. Oops, my bad!&nbsp;&nbsp; 2. No worries!&nbsp;&nbsp; 3. Never mind, I found it.</p>
+      </details>
+
+      <h3 class="sub">④ 대답해 보기 — My bad / No worries / Never mind로 말해 보기</h3>
+      <ul class="qcards">
+        <li class="qcard">When was the last time you said "My bad"? What happened?</li>
+        <li class="qcard">What do you usually say when a friend says sorry to you?</li>
+        <li class="qcard">Have you ever started to ask something and then said "Never mind"? Why?</li>
+      </ul>
+
+      <div class="quizlet-box">
+        <h4>퀴즐렛으로 말하기 복습</h4>
+        <div class="embed-slot" id="embed62"><iframe src="https://quizlet.com/1234947963/flashcards/embed?i=77yoag&x=1jj1" height="700" width="100%" style="border:0"></iframe></div>
+        <a class="quizlet-fallback" href="https://quizlet.com/kr/1234947963/daniel-grammar-day-62-my-bad-no-worries-never-mind-flash-cards/" target="_blank" rel="noopener">카드가 안 보이면 퀴즐렛에서 열기 →</a>
+      </div>
+    </section>
+  </div>
+
   <div class="day-detail" id="detail61">
     <button class="back-to-list" onclick="closeDay()">← 목록으로</button>
     <section class="day-section" id="day61" data-track="basic">
